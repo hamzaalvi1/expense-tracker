@@ -1,5 +1,14 @@
 import { SignIn } from "@clerk/nextjs";
 
 export default function SignInPage() {
-  return <SignIn path="/sign-in" />;
+  return (
+    <SignIn
+      appearance={{
+        elements: {
+          card: "bg-[#efefef]",
+        },
+      }}
+      path="/sign-in"
+    />
+  );
 }

@@ -6,7 +6,8 @@ export default function SignUpPage() {
       appearance={{
         elements: {
           headerTitle: "capitalize text-[22px] font-semibold",
-          button: " py-3 ",
+          button: "py-3",
+          card: "bg-[#efefef]",
         },
       }}
       path="/sign-up"

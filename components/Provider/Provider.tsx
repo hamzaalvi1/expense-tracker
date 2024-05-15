@@ -1,4 +1,4 @@
-import { ClerkProvider } from "@clerk/nextjs";
+import { ThemeProvider } from "next-themes";
 
 interface ProviderProps {
   children: React.ReactNode;
@@ -7,7 +7,14 @@ const Provider: React.FC<ProviderProps> = (props) => {
   const { children } = props;
   return (
     <>
-      <ClerkProvider>{children}</ClerkProvider>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="dark"
+        enableSystem
+        disableTransitionOnChange
+      >
+        {children}
+      </ThemeProvider>
     </>
   );
 };
